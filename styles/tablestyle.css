@@ -1,32 +1,48 @@
 #tableId {
     border-collapse: collapse;
-    border: 1px solid black;
     max-width: 1920px;
     padding: 0;
 
 }
 
-th {
+.tableHead {
     border-collapse: collapse;
     border: 2px solid black;
     font-size: large;
 }
 
+th {
+    border-collapse: collapse;
+    font-size: medium;
+    border: 1px solid black;
+    word-wrap:break-word;
+}
+
+
+.leftCell {
+    border-left: 2px solid black;
+}
+
+.rightCell {
+    border-right: 2px solid black;
+}
 
 #tableCollumnChangeId {
     width: 80px;
 }
 
 #tableCollumnDateId {
-    width: 80px;
+    width: 190px;
 }
 
 #tableCollumnTitleId {
     width: 20%;
+    max-width: 20%;
 }
 
 #tableCollumnContentId {
     width: 50%;
+    max-width: 50%;;
 }
 
 #tableCollumnStatusId {

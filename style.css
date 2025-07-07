@@ -1,8 +1,16 @@
-#tableId{
-   border-collapse: collapse;
-   border: 1px solid black;
+main {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+
 }
-th{
-   border-collapse: collapse;
-   border: 1px solid black;
+
+#inputContentId {
+
+    margin-bottom: 24px;
+}
+
+.inputContent::placeholder {
+  color: red;
+  opacity: 1; 
 }

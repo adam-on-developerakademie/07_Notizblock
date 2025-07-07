@@ -1,0 +1,34 @@
+#tableId {
+    border-collapse: collapse;
+    border: 1px solid black;
+    max-width: 1920px;
+    padding: 0;
+
+}
+
+th {
+    border-collapse: collapse;
+    border: 2px solid black;
+    font-size: large;
+}
+
+
+#tableCollumnChangeId {
+    width: 80px;
+}
+
+#tableCollumnDateId {
+    width: 80px;
+}
+
+#tableCollumnTitleId {
+    width: 20%;
+}
+
+#tableCollumnContentId {
+    width: 50%;
+}
+
+#tableCollumnStatusId {
+    width: 80px;
+}

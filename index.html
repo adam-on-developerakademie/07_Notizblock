@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notizblock</title>
-<link rel="stylesheet" href="./styles/standard.css">
-<link rel="stylesheet" href="./style.css">
-<script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/tablestyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 
 </head>
+
 <body>
-    <h1>Notizblock</h1>
-    <table id="tableId">
-        <tr id="tableHeadId">
-            <th id="tableCollumnChangeId">ändern</th>
-            <th id="tableCollumnTitleId">Titel</th>
-            <th id="tableCollumnContentId" >Inhalt</th>
-            <th id="tableCollumnStatusId">Status</th>
-        </tr>
-    </table>
-    
+    <header>
+        <h1>Notizblock</h1>
+    </header>
+    <main>
+        <label id="inputTitelLabelId" for="Titel">Titel:</label>
+        <input id="inputTitleId" class="inputTitleId" type="text" name="Titel" autocomplete="off"
+            onkeydown="if(event.key==='Enter') {insertCheck()}"
+            placeholder=" Trage hier den Titel deiner Notiz ein">
+
+        <label for="Inhalt">Inhalt:</label>
+        <input id="inputContentId" class="inputContentId" type="text" name="Inhalt" autocomplete="off"
+            onkeydown="if(event.key==='Enter') {insertCheck()}"
+            placeholder=" Trage hier den Inhalt deiner Notiz ein">
+
+        <table id="tableId">
+            <tr id="tableHeadId">
+                <th id="tableCollumnChangeId">ändern</th>
+                <th id="tableCollumnDateId">Datum</th>
+                <th id="tableCollumnTitleId">Titel</th>
+                <th id="tableCollumnContentId">Inhalt</th>
+                <th id="tableCollumnStatusId">Status</th>
+            </tr>
+        </table>
+    </main>
+
 </body>
+
 </html>

@@ -8,8 +8,7 @@ let noteContentArchive = ['A3'];
 let noteDateDelete = ['D1'];
 let noteTitleDelete = ['D2'];
 let noteContentDelete = ['D3'];
-let tableArray = []
-let myArray
+let tableRowCounter = 0
 
 
 function insetIntoArray(arrayName, arrayContent, noteDate, noteStatus) {
@@ -31,7 +30,7 @@ function insertCheck() {
         if (document.getElementById('inputContentId').value == '') { document.getElementById('inputContentId').focus(); document.getElementById('inputContentId').classList.add('inputContent') };
     }
 }
-let tableRowCounter = 0
+
 function showArray() {
     let myClass = ''; tableRowCounter = 0
     document.getElementById('tableId').innerHTML = tableHead();
@@ -39,6 +38,9 @@ function showArray() {
     tableContentDelete(myClass);
     tableContentArchive(myClass);
     console.log(tableRowCounter)
-
 }
 
+function contentChangeArray(myTest){
+
+    console.log(myTest)
+}

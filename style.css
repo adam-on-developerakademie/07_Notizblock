@@ -1,17 +1,29 @@
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(./fonts/OpenSans-Regular.ttf);
+}
+
+
 main {
     max-width: 1920px;
     display: flex;
     flex-direction: column;
-
 }
 
 #inputContentId {
-
     margin-bottom: 24px;
 }
 
-.inputContent::placeholder {
-  color: red;
-  opacity: 1; 
+.inputField {
+    font-size: 24px;
 }
 
+.inputLabel {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.inputContent::placeholder {
+    color: red;
+    opacity: 1;
+}

@@ -14,20 +14,20 @@
 
 </head>
 
-<body>
+<body onload="loadFromLocalStorage(), showArray()">
     <header>
         <h1>Notizblock</h1>
     </header>
     <main>
-        <label id="inputTitelLabelId" for="Titel">Titel:</label>
-        <input id="inputTitleId" class="inputTitleId" type="text" name="Titel" autocomplete="off"
+        <label class="inputLabel" for="Titel">Titel:</label>
+        <input id="inputTitleId" class="inputField" type="text" name="Titel" autocomplete="off"
             onkeydown="if(event.key==='Enter') {insertCheck()}"
-            placeholder=" Trage hier den Titel deiner Notiz ein">
+            placeholder="Trage hier den Titel deiner Notiz ein.">
 
-        <label for="Inhalt">Inhalt:</label>
-        <input id="inputContentId" class="inputContentId" type="text" name="Inhalt" autocomplete="off"
+        <label class="inputLabel" for="Inhalt">Inhalt:</label>
+        <input id="inputContentId" class="inputField" type="text" name="Inhalt" autocomplete="off"
             onkeydown="if(event.key==='Enter') {insertCheck()}"
-            placeholder=" Trage hier den Inhalt deiner Notiz ein">
+            placeholder="Trage hier den Inhalt deiner Notiz ein.">
 
         <table id="tableId">
             <tr class="tableHead">

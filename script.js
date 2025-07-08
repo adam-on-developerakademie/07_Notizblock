@@ -36,7 +36,8 @@ function showArray() {
     tableContentNormal(myClass);
     tableContentDelete(myClass);
     tableContentArchive(myClass);
-  }
+    saveToLocalStorage()
+}
 
 function contentChangeArray(sourceArray, destinationArray, i) {
     for (j = 0; j < arrays.length; j++) {
@@ -46,4 +47,17 @@ function contentChangeArray(sourceArray, destinationArray, i) {
         console.log(sArray, dArry)
         showArray();
     }
+}
+
+function saveToLocalStorage() {
+    localStorage.setItem('noteDateArchive',JSON.stringify(noteDateArchive)) ;
+     localStorage.setItem('noteTitleArchive',JSON.stringify(noteTitleArchive)) ;
+      localStorage.setItem('noteContentArchive',JSON.stringify(noteContentArchive)) ;
+
+}
+function loadFromLocalStorage() {
+    noteDateArchive=JSON.parse(localStorage.getItem('noteDateArchive')) ;
+    noteTitleArchive=JSON.parse(localStorage.getItem('noteTitleArchive')) ;
+    noteContentArchive=JSON.parse(localStorage.getItem('noteContentArchive')) ;
+
 }

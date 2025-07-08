@@ -49,3 +49,13 @@ th {
 .tableBottom {
     border-bottom: 2px solid black;
 }
+.normalClass{
+    background-color: rgb(221, 254, 172);
+}
+.archiveClass{
+    background-color: rgb(52, 52, 52);
+    color:white;
+}
+.deleteClass{
+    background-color: rgb(255, 176, 176);
+}

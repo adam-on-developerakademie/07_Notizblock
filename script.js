@@ -1,26 +1,25 @@
 
-let noteDateArray = [];
-let noteTitleArray = [];
-let noteContentArray = [];
-let noteDateArchive = ['A1'];
-let noteTitleArchive = ['A2'];
-let noteContentArchive = ['A3'];
-let noteDateDelete = ['D1'];
-let noteTitleDelete = ['D2'];
-let noteContentDelete = ['D3'];
-let tableRowCounter = 0
-
+let noteDateNormal = [];
+let noteTitleNormal = [];
+let noteContentNormal = [];
+let noteDateArchive = [];
+let noteTitleArchive = [];
+let noteContentArchive = [];
+let noteDateDelete = [];
+let noteTitleDelete = [];
+let noteContentDelete = [];
+let arrays = ['noteDate', 'noteTitle', 'noteContent']
 
 function insetIntoArray(arrayName, arrayContent, noteDate, noteStatus) {
     if (arrayName != null) { myArray = eval(arrayName); myArray.push(arrayContent) };
-    console.log('<' + noteDateArray + '<  >' + noteTitleArray + '<  >' + noteContentArray + '>');
+    console.log('<' + noteDateNormal + '<  >' + noteTitleNormal + '<  >' + noteContentNormal + '>');
 }
 
 function insertCheck() {
     if (document.getElementById('inputTitleId').value != '' && document.getElementById('inputContentId').value != '') {
-        insetIntoArray('noteDateArray', myDate());
-        insetIntoArray('noteTitleArray', document.getElementById('inputTitleId').value);
-        insetIntoArray('noteContentArray', document.getElementById('inputContentId').value);
+        insetIntoArray('noteDateNormal', myDate());
+        insetIntoArray('noteTitleNormal', document.getElementById('inputTitleId').value);
+        insetIntoArray('noteContentNormal', document.getElementById('inputContentId').value);
         document.getElementById('inputTitleId').value = ''; document.getElementById('inputTitleId').classList.remove('inputContent');
         document.getElementById('inputContentId').value = ''; document.getElementById('inputContentId').classList.remove('inputContent');
         document.getElementById('inputTitleId').focus()
@@ -32,15 +31,19 @@ function insertCheck() {
 }
 
 function showArray() {
-    let myClass = ''; tableRowCounter = 0
+    let myClass = ''
     document.getElementById('tableId').innerHTML = tableHead();
     tableContentNormal(myClass);
     tableContentDelete(myClass);
     tableContentArchive(myClass);
-    console.log(tableRowCounter)
-}
+  }
 
-function contentChangeArray(myTest){
-
-    console.log(myTest)
+function contentChangeArray(sourceArray, destinationArray, i) {
+    for (j = 0; j < arrays.length; j++) {
+        let sArray = eval(arrays[j] + sourceArray); let dArry = eval(arrays[j] + destinationArray);
+        dArry.push(sArray[i])
+        sArray.splice(i, 1)
+        console.log(sArray, dArry)
+        showArray();
+    }
 }

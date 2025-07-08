@@ -14,11 +14,11 @@ function tableContentNormal(myClass) {
         if (i == noteDateNormal.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr>
-                <th class="normalClass leftCell${myClass}"><button onclick="contentChangeArray('Normal','Archive',${i})">A</button><button onclick="contentChangeArray('Normal','Delete',${i})">D</button></th>
+                <th class="normalClass leftCell${myClass}"><button onclick="contentChangeArray('Normal','Archive',${i})">S</button><button onclick="contentChangeArray('Normal','Delete',${i})">L</button></th>
                 <th class="normalClass ${myClass}">${noteDateNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteTitleNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteContentNormal[i]}</th>
-                <th class="normalClass rightCell${myClass}">normal</th>
+                <th class="normalClass rightCell${myClass}">Normal</th>
             </tr>`}
 }
 function tableContentArchive(myClass) {
@@ -26,11 +26,11 @@ function tableContentArchive(myClass) {
         if (i == noteDateArchive.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr>
-                <th class="archiveClass leftCell${myClass}"><button onclick="contentChangeArray(Archive','Normal',${i})">N</button><button onclick="contentChangeArray('Archive','Delete',${i})">D</button></th>
+                <th class="archiveClass leftCell${myClass}"><button onclick="contentChangeArray('Archive','Normal',${i})">N</button><button onclick="contentChangeArray('Archive','Delete',${i})">L</button></th>
                 <th class="archiveClass ${myClass}">${noteDateArchive[i]}</th>
                 <th class="archiveClass ${myClass}">${noteTitleArchive[i]}</th>
                 <th class="archiveClass ${myClass}">${noteContentArchive[i]}</th>
-                <th class="archiveClass rightCell${myClass}">archiviert</th>
+                <th class="archiveClass rightCell${myClass}">geSpeichert</th>
             </tr>`}
 }
 function tableContentDelete(myClass) {
@@ -38,10 +38,10 @@ function tableContentDelete(myClass) {
         if (i == noteDateDelete.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr>
-                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">A</button></th>
+                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">S</button></th>
                 <th class="deleteClass ${myClass}">${noteDateDelete[i]}</th>
                 <th class="deleteClass ${myClass}">${noteTitleDelete[i]}</th>
                 <th class="deleteClass ${myClass}">${noteContentDelete[i]}</th>
-                <th class="deleteClass rightCell${myClass}">gelöscht</th>
+                <th class="deleteClass rightCell${myClass}">geLöscht</th>
             </tr>`}
 }

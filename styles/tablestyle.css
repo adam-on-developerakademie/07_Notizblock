@@ -50,13 +50,14 @@ th {
     border-bottom: 2px solid black;
 }
 .normalClass{
-    background-color: rgb(221, 254, 172);
+    background-color:white;
 }
 .archiveClass{
-    background-color: rgb(52, 52, 52);
-    color:white;
-}
+    background-color: rgb(193, 255, 213);
+  }
 .deleteClass{
     background-color: rgb(255, 176, 176);
 }
-.tableHead{background-color: aqua;}
+.tableHead{background-color: rgb(47, 47, 47);
+color: white;
+}

@@ -21,14 +21,15 @@
     <main>
         <label class="inputLabel" for="Titel">Titel:</label>
         <input id="inputTitleId" class="inputField" type="text" name="Titel" autocomplete="off"
-            onkeydown="if(event.key==='Enter') {insertCheck()}"
+            onclick="myOnclickInput()" onkeydown="if(event.key==='Enter') {insertCheck()}"
             placeholder="Trage hier den Titel deiner Notiz ein.">
 
         <label class="inputLabel" for="Inhalt">Inhalt:</label>
         <input id="inputContentId" class="inputField" type="text" name="Inhalt" autocomplete="off"
-            onkeydown="if(event.key==='Enter') {insertCheck()}"
+            onclick="myOnclickInput()" onkeydown="if(event.key==='Enter') {insertCheck()}"
             placeholder="Trage hier den Inhalt deiner Notiz ein.">
-
+        <label class="inputLabel" for="Titel">Bearbeiten:
+            <input type="checkbox" id="checkboxId" onclick="unCheckedCheckbox ()" ()></label>
         <table id="tableId">
             <tr class="tableHead">
                 <th class="tableHead" id="tableCollumnChangeId">ändern</th>

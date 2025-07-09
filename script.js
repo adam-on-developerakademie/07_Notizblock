@@ -9,13 +9,33 @@ let noteDateDelete = [];
 let noteTitleDelete = [];
 let noteContentDelete = [];
 let arrays = ['noteDate', 'noteTitle', 'noteContent']
+let myEditArray = []
 
-function insetIntoArray(arrayName, arrayContent, noteDate, noteStatus) {
+function insetIntoArray(arrayName, arrayContent) {
     if (arrayName != null) { myArray = eval(arrayName); myArray.push(arrayContent) };
-    console.log('<' + noteDateNormal + '<  >' + noteTitleNormal + '<  >' + noteContentNormal + '>');
+    //console.log('<' + noteDateNormal + '<  >' + noteTitleNormal + '<  >' + noteContentNormal + '>');
+}
+function updateArrayFunction() {
+    console.log('noteTitle' + myEditArray[0] + '.splice(' + myEditArray[1] + ',1,"' + document.getElementById('inputContentId').value + '")');
+    let updateArry = eval('noteDate' + myEditArray[0])
+    updateArry.splice(myEditArray[1], 1, myDate())
+    updateArry = eval('noteTitle' + myEditArray[0])
+    updateArry.splice(myEditArray[1], 1, document.getElementById('inputTitleId').value)
+    updateArry = eval('noteContent' + myEditArray[0])
+    updateArry.splice(myEditArray[1], 1, document.getElementById('inputContentId').value)
+    showArray();
+
 }
 
 function insertCheck() {
+    if (myEditArray.length != 0) {
+        updateArrayFunction()
+    } else {
+        insertCheckFolow(myEditArray)
+    }
+}
+
+function insertCheckFolow() {
     if (document.getElementById('inputTitleId').value != '' && document.getElementById('inputContentId').value != '') {
         insetIntoArray('noteDateNormal', myDate());
         insetIntoArray('noteTitleNormal', document.getElementById('inputTitleId').value);
@@ -49,15 +69,3 @@ function contentChangeArray(sourceArray, destinationArray, i) {
     }
 }
 
-function saveToLocalStorage() {
-    localStorage.setItem('noteDateArchive',JSON.stringify(noteDateArchive)) ;
-     localStorage.setItem('noteTitleArchive',JSON.stringify(noteTitleArchive)) ;
-      localStorage.setItem('noteContentArchive',JSON.stringify(noteContentArchive)) ;
-
-}
-function loadFromLocalStorage() {
-    noteDateArchive=JSON.parse(localStorage.getItem('noteDateArchive')) ;
-    noteTitleArchive=JSON.parse(localStorage.getItem('noteTitleArchive')) ;
-    noteContentArchive=JSON.parse(localStorage.getItem('noteContentArchive')) ;
-
-}

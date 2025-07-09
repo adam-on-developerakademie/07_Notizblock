@@ -75,3 +75,9 @@ function myOnclickInput() {
 
 }
 
+function daleteForever(i) {
+    noteDateDelete.splice(i, 1)
+    noteTitleDelete.splice(i, 1)
+    noteContentDelete.splice(i, 1)
+    if (window.innerWidth > 500) { showArray() } else { showArraySmall() };
+} 

@@ -25,7 +25,7 @@ function tableContentNormal(myClass) {
                 <th class="normalClass ${myClass}">${noteDateNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteTitleNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteContentNormal[i]}</th>
-                <th class="normalClass rightCell${myClass}">Normal</th>
+                <th class="normalClass rightCell${myClass}">nicht gespeichert</th>
             </tr>`}
 }
 
@@ -38,7 +38,7 @@ function tableContentArchive(myClass) {
                 <th class="archiveClass ${myClass}">${noteDateArchive[i]}</th>
                 <th class="archiveClass ${myClass}">${noteTitleArchive[i]}</th>
                 <th class="archiveClass ${myClass}">${noteContentArchive[i]}</th>
-                <th class="archiveClass rightCell${myClass}">geSpeichert</th>
+                <th class="archiveClass rightCell${myClass}">gespeichert</th>
             </tr>`}
 }
 
@@ -47,11 +47,11 @@ function tableContentDelete(myClass) {
         if (i == noteDateDelete.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr onclick="myEdit(this)"  name='["Delete","${i}"]'>
-                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">S</button></th>
+                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">S</button><button onclick="daleteForever(${i})">L</button></th>
                 <th class="deleteClass ${myClass}">${noteDateDelete[i]}</th>
                 <th class="deleteClass ${myClass}">${noteTitleDelete[i]}</th>
                 <th class="deleteClass ${myClass}">${noteContentDelete[i]}</th>
-                <th class="deleteClass rightCell${myClass}">geLöscht</th>
+                <th class="deleteClass rightCell${myClass}">löschen?</th>
             </tr>`}
 }
 
@@ -82,7 +82,7 @@ function tableContentDeleteSmall(myClass) {
         if (i == noteDateDelete.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr onclick="myEdit(this)"  name='["Delete","${i}"]'>
-                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">S</button></th>
+                <th class="deleteClass leftCell${myClass}"><button onclick="contentChangeArray('Delete','Normal',${i})">N</button><button onclick="contentChangeArray('Delete','Archive',${i})">S</button><button onclick="daleteForever(${i})">L</button></th>
                 <th class="deleteClass ${myClass}">${noteTitleDelete[i]}</th>
                 <th class="deleteClass ${myClass}">${noteContentDelete[i]}</th>
             </tr>`}

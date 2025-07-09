@@ -29,8 +29,10 @@ function myEdit(myArrayValue) {
     if (document.getElementById('checkboxId').checked) {
         document.getElementById('inputTitleId').value = eval('noteTitle' + myRow[0] + '[' + myRow[1] + ']')
         document.getElementById('inputContentId').value = eval('noteContent' + myRow[0] + '[' + myRow[1] + ']')
+        document.getElementById('inputTitleId').classList.remove('inputContent');
         myEditArray=myRow
     } else {
+        document.getElementById('inputTitleId').classList.remove('inputContent');
         document.getElementById('inputTitleId').placeholder = eval('noteTitle' + myRow[0] + '[' + myRow[1] + ']')
         document.getElementById('inputContentId').placeholder = eval('noteContent' + myRow[0] + '[' + myRow[1] + ']')
     }

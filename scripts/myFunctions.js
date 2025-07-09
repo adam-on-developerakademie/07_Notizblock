@@ -17,11 +17,14 @@ function saveToLocalStorage() {
 
 }
 function loadFromLocalStorage() {
+
+    if (typeof localStorage != 'undefined'){
+         if (localStorage.getItem('noteDateArchive') != null){
     noteDateArchive = JSON.parse(localStorage.getItem('noteDateArchive'));
     noteTitleArchive = JSON.parse(localStorage.getItem('noteTitleArchive'));
     noteContentArchive = JSON.parse(localStorage.getItem('noteContentArchive'));
     if(window.innerWidth>500){showArray()}else{showArraySmall()};
-    }
+    }else{saveToLocalStorage()} }}
 
 
 function myEdit(myArrayValue) {

@@ -20,7 +20,8 @@ function loadFromLocalStorage() {
     noteDateArchive = JSON.parse(localStorage.getItem('noteDateArchive'));
     noteTitleArchive = JSON.parse(localStorage.getItem('noteTitleArchive'));
     noteContentArchive = JSON.parse(localStorage.getItem('noteContentArchive'));
-}
+    if(window.innerWidth>500){showArray()}else{showArraySmall()};
+    }
 
 
 function myEdit(myArrayValue) {
@@ -55,3 +56,10 @@ function myOnclickInput(){
 
 }
 
+window.addEventListener('resize', () => {
+  if(window.innerWidth>500){
+    showArray()
+  } else {
+    showArraySmall()
+  }
+})

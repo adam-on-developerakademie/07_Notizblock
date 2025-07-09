@@ -1,4 +1,3 @@
-
 function tableHead() {
     return `<tr class="tableHead">
                 <th class="tableHead" id="tableCollumnChangeId">ändern</th>
@@ -8,12 +7,12 @@ function tableHead() {
                 <th class="tableHead" id="tableCollumnStatusId">Status</th>
             </tr>`
 }
+
 function tableHeadSmall() {
     return `<tr class="tableHead">
                 <th class="tableHead" id="tableCollumnChangeId">ändern</th>
                 <th class="tableHead" id="tableCollumnTitleId">Titel</th>
                 <th class="tableHead" id="tableCollumnContentId">Inhalt</th>
-
             </tr>`
 }
 
@@ -29,6 +28,7 @@ function tableContentNormal(myClass) {
                 <th class="normalClass rightCell${myClass}">Normal</th>
             </tr>`}
 }
+
 function tableContentArchive(myClass) {
     for (i = 0; i < noteDateArchive.length; i++) {
         if (i == noteDateArchive.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
@@ -41,6 +41,7 @@ function tableContentArchive(myClass) {
                 <th class="archiveClass rightCell${myClass}">geSpeichert</th>
             </tr>`}
 }
+
 function tableContentDelete(myClass) {
     for (i = 0; i < noteDateDelete.length; i++) {
         if (i == noteDateDelete.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
@@ -53,6 +54,7 @@ function tableContentDelete(myClass) {
                 <th class="deleteClass rightCell${myClass}">geLöscht</th>
             </tr>`}
 }
+
 function tableContentNormalSmall(myClass) {
     for (i = 0; i < noteDateNormal.length; i++) {
         if (i == noteDateNormal.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
@@ -63,6 +65,7 @@ function tableContentNormalSmall(myClass) {
                 <th class="normalClass ${myClass}">${noteContentNormal[i]}</th>
             </tr>`}
 }
+
 function tableContentArchiveSmall(myClass) {
     for (i = 0; i < noteDateArchive.length; i++) {
         if (i == noteDateArchive.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
@@ -73,6 +76,7 @@ function tableContentArchiveSmall(myClass) {
                 <th class="archiveClass ${myClass}">${noteContentArchive[i]}</th>
             </tr>`}
 }
+
 function tableContentDeleteSmall(myClass) {
     for (i = 0; i < noteDateDelete.length; i++) {
         if (i == noteDateDelete.length - 1) { myClass = ' tableBottom' } else { myClass = '' }

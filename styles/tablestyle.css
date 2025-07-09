@@ -18,7 +18,6 @@ th {
     word-wrap:break-word;
 }
 
-
 .leftCell {
     border-left: 2px solid black;
 }
@@ -39,6 +38,10 @@ th {
     width: 15%;
 }
 
+@media (max-width: 500px) {
+    #tableCollumnTitleId {
+        width: 100px;
+    }}
 #tableCollumnContentId {
     width: 55%;
     }
@@ -46,18 +49,22 @@ th {
 #tableCollumnStatusId {
     width: 80px;
 }
+
 .tableBottom {
     border-bottom: 2px solid black;
 }
+
 .normalClass{
     background-color:white;
 }
+
 .archiveClass{
     background-color: rgb(193, 255, 213);
   }
 .deleteClass{
     background-color: rgb(255, 176, 176);
 }
+
 .tableHead{background-color: rgb(47, 47, 47);
 color: white;
 }

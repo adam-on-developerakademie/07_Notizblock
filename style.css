@@ -3,10 +3,8 @@
     src: url(./fonts/OpenSans-Regular.ttf);
 }
 
-
-header{
+header {
     max-width: 1920px;
-
     margin-left: 100%;
     margin-right: 100%;
 
@@ -16,8 +14,7 @@ main {
     max-width: 1920px;
     display: flex;
     flex-direction: column;
-width: 100%;
-
+    width: 100%;
 }
 
 #inputContentId {

@@ -42,11 +42,15 @@ function myEdit(myArrayValue) {
         document.getElementById('inputTitleId').value = eval('noteTitle' + myRow[0] + '[' + myRow[1] + ']');
         document.getElementById('inputContentId').value = eval('noteContent' + myRow[0] + '[' + myRow[1] + ']');
         document.getElementById('inputTitleId').classList.remove('inputContent');
+        document.getElementById('inputContentId').classList.remove('inputContent');
         myEditArray = myRow
     } else {
-        document.getElementById('inputTitleId').classList.remove('inputContent');
+        document.getElementById('inputTitleId').value = '';
+        document.getElementById('inputContentId').value = '';
         document.getElementById('inputTitleId').placeholder = eval('noteTitle' + myRow[0] + '[' + myRow[1] + ']');
         document.getElementById('inputContentId').placeholder = eval('noteContent' + myRow[0] + '[' + myRow[1] + ']');
+        document.getElementById('inputTitleId').classList.remove('inputContent');
+        document.getElementById('inputContentId').classList.remove('inputContent');
     }
 }
 
@@ -57,6 +61,7 @@ function unCheckedCheckbox() {
         document.getElementById('inputTitleId').placeholder = '';
         document.getElementById('inputContentId').placeholder = '';
         document.getElementById('inputTitleId').classList.remove('inputContent');
+        document.getElementById('inputContentId').classList.remove('inputContent');
         myEditArray.length = 0
 
     }
@@ -66,6 +71,7 @@ function myOnclickInput() {
     document.getElementById('inputTitleId').placeholder = 'Trage hier den Titel deiner Notiz ein.';
     document.getElementById('inputContentId').placeholder = 'Trage hier den Inhalt deiner Notiz ein.';
     document.getElementById('inputTitleId').classList.remove('inputContent');
+    document.getElementById('inputContentId').classList.remove('inputContent');
 
 }
 

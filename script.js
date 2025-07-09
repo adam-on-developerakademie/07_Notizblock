@@ -74,5 +74,3 @@ function contentChangeArray(sourceArray, destinationArray, i) {
     }
 }
 
-function resolutionCheck (){console.log(window.innerWidth)}
-resolutionCheck ()

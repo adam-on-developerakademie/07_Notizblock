@@ -15,6 +15,7 @@ function insetIntoArray(arrayName, arrayContent) {
     if (arrayName != null) { myArray = eval(arrayName); myArray.push(arrayContent) };
 }
 function updateArrayFunction() {
+    if(document.getElementById('inputContentId').value!='' && document.getElementById('inputTitleId').value!=''){
     let updateArry = eval('noteDate' + myEditArray[0])
     updateArry.splice(myEditArray[1], 1, myDate())
     updateArry = eval('noteTitle' + myEditArray[0])
@@ -23,7 +24,7 @@ function updateArrayFunction() {
     updateArry.splice(myEditArray[1], 1, document.getElementById('inputContentId').value)
      myOnclickInput()
      if(window.innerWidth>500){showArray()}else{showArraySmall()};
-}
+}}
 
 function insertCheck() {
     if (myEditArray.length != 0) {

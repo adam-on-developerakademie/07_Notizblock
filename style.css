@@ -44,4 +44,12 @@ footer {
 button{
     height: 20px;
     width: 25px;
+    padding-left: 10px;
+    padding-right: 18px;
+    align-items: center;
+    border: 1px;
+    border-color: auto;
+    border-style: solid;
+    margin-left: 2px;
+    margin-right: 2px;
 }

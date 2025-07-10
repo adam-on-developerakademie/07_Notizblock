@@ -21,7 +21,7 @@ function tableContentNormal(myClass) {
         if (i == noteDateNormal.length - 1) { myClass = ' tableBottom' } else { myClass = '' }
         document.getElementById('tableId').innerHTML +=
             `<tr onclick="myEdit(this)" name='["Normal","${i}"]'>
-                <th class="normalClass leftCell${myClass}"><button onclick="contentChangeArray('Normal','Archive',${i})">S</button><button onclick="contentChangeArray('Normal','Delete',${i})">L</button></th>
+                <th class="normalClass leftCell${myClass}"><button onclick="contentChangeArray('Normal','Archive',${i})">S</button><tab><button onclick="contentChangeArray('Normal','Delete',${i})">L</button></th>
                 <th class="normalClass ${myClass}">${noteDateNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteTitleNormal[i]}</th>
                 <th class="normalClass ${myClass}">${noteContentNormal[i]}</th>
